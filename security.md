@@ -247,5 +247,5 @@ UserDetailsServiceAutoConfiguration 全限定名为:
 经过以上的配置，相信聪明的你已经知道如何使用数据库来管理用户了 。只需要将 UserDetailsRepository 中的 users 属性替代为抽象的Dao接口就行了，无论你使用Jpa还是Mybatis来实现。
 
 #### 3. 总结
-
+ 
 今天我们对Spring Security 中的用户信息 UserDetails 相关进行的一些解读。并自定义了用户信息处理服务。相信你已经对在Spring Security中如何加载用户信息，如何扩展用户信息有所掌握了。后面我们会由浅入深慢慢解读Spring Security。相关代码已经上传git仓库,关注公众号Felordcn 后回复ss01 获取demo源码。 后续也可以及时
