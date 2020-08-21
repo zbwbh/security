@@ -64,27 +64,27 @@ spring security 默认提供了表单登录的功能。我们新建一个类Secu
 现在我们给系统增加“/product” 代表商品信息方面的资源（USER可以访问）；增加"/admin"代码管理员方面的资源（USER不能访问）。代码如下：
 
 
-    @Controller
-    @RequestMapping("/product")
-    public class ProductTestController {
-    
-        @RequestMapping("/info")
-        @ResponseBody
-        public String productInfo(){
-            return " some product info ";
+        @Controller
+        @RequestMapping("/product")
+        public class ProductTestController {
+        
+            @RequestMapping("/info")
+            @ResponseBody
+            public String productInfo(){
+                return " some product info ";
+            }
         }
-    }
-    -------------------------------------------
-    @Controller
-    @RequestMapping("/admin")
-    public class AdminTestController {
-    
-        @RequestMapping("/home")
-        @ResponseBody
-        public String productInfo(){
-            return " admin home page ";
+        -------------------------------------------
+        @Controller
+        @RequestMapping("/admin")
+        public class AdminTestController {
+        
+            @RequestMapping("/home")
+            @ResponseBody
+            public String productInfo(){
+                return " admin home page ";
+            }
         }
-    }
 
 在正式的应用中，我们的用户和角色是保存在数据库中的；本例为了方便演示，我们来创建两个存放于内存的用户和角色。我们在上一步中创建的SecurityConfiguration中增加角色用户，如下代码：
 
